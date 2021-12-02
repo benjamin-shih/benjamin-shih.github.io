@@ -93,23 +93,6 @@
             </div>
         </div>
 
-
-        <script>
-       //Array of images which you want to show: Use path you want.
-       var images=new Array('assets/namibia1.jpg','assets/namibia2.jpg','assets/namibia3.jpg');
-       var nextimage=0;
-       doSlideshow();
-
-       function doSlideshow(){
-           if(nextimage>=images.length){nextimage=0;}
-           $('.global-header')
-           .css('background-image','url("'+images[nextimage++]+'")')
-           .fadeIn(500,function(){
-               setTimeout(doSlideshow,1000);
-           });
-       }
-       </script>
-
         <script src="js/imagesloaded.pkgd.min.js"></script>
 
         <script type="text/javascript" src="js/jquery.min.js"></script>
