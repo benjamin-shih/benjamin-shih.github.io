@@ -338,9 +338,10 @@ section:first-child,
 .entry-secondary {
   margin-bottom: 0;
   color: var(--muted);
-  font-family: var(--sans);
-  font-size: 0.9rem;
-  line-height: 1.45;
+  font-family: Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-size: 0.93rem;
+  letter-spacing: 0.005em;
+  line-height: 1.4;
 }
 
 .degree-list p {

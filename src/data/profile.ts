@@ -31,13 +31,13 @@ export const education = [
   {
     institution: "Stanford University",
     degree: "Graduate student, Institute for Computational and Mathematical Engineering",
-    period: "Present",
+    period: "2024-2026",
   },
   {
     institution: "Brown University",
     degree:
-      "B.S. with Honors in Applied Mathematics–Computer Science; B.A. in Mathematics",
-    period: "Completed 2024",
+      "Sc.B. with Honors in Applied Mathematics–Computer Science; A.B. in Mathematics",
+    period: "2020-2024",
   },
 ];
 
