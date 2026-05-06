@@ -35,9 +35,9 @@ const canonical = new URL(currentPath, Astro.site ?? "https://benjamin-shih.gith
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header class="site-header">
-      <nav class="nav-shell" aria-label="Primary navigation">
-        <a class="brand" href="/" aria-label="Benjamin Shih home">BS</a>
-        <div class="nav-links">
+      <div class="header-inner">
+        <a class="site-title" href="/">Benjamin Shih</a>
+        <nav class="nav-links" aria-label="Primary navigation">
           {navItems.map((item) => (
             <a
               href={item.href}
@@ -46,8 +46,8 @@ const canonical = new URL(currentPath, Astro.site ?? "https://benjamin-shih.gith
               {item.label}
             </a>
           ))}
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
     <main id="main-content" class="page-shell">
@@ -56,7 +56,6 @@ const canonical = new URL(currentPath, Astro.site ?? "https://benjamin-shih.gith
 
     <footer class="site-footer">
       <p>© {new Date().getFullYear()} Benjamin Shih</p>
-      <p>Built as a static academic website for long-term portability.</p>
     </footer>
   </body>
 </html>

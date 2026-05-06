@@ -4,79 +4,67 @@ import { education, experience, outside, profile, teaching } from "../data/profi
 ---
 
 <BaseLayout title="Background | Benjamin Shih" description="Education, professional experience, teaching, and selected background for Benjamin Shih.">
-  <section class="hero narrow-hero">
-    <p class="eyebrow">Background</p>
-    <h1>Academic training and quantitative research experience</h1>
-    <p class="lede">
-      A concise public background page. A complete CV is available upon request.
-    </p>
-  </section>
+  <header class="page-heading">
+    <h1>Background</h1>
+    <p>A concise public background page. A complete CV is available upon request.</p>
+  </header>
 
-  <section class="section two-column balanced">
-    <div>
-      <div class="section-heading">
-        <p class="eyebrow">Education</p>
-        <h2>Academic</h2>
-      </div>
-      <div class="timeline">
-        {education.map((item) => (
-          <article class="timeline-item">
-            <p class="timeline-period">{item.period}</p>
+  <section>
+    <h2>Education</h2>
+    <div class="entry-list">
+      {education.map((item) => (
+        <article class="dated-entry">
+          <p class="date">{item.period}</p>
+          <div>
             <h3>{item.institution}</h3>
             <p>{item.degree}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-
-    <div>
-      <div class="section-heading">
-        <p class="eyebrow">Teaching</p>
-        <h2>Brown University</h2>
-      </div>
-      <div class="timeline">
-        {teaching.map((item) => (
-          <article class="timeline-item">
-            <p class="timeline-period">{item.period}</p>
-            <h3><a href={item.href}>{item.course}</a></h3>
-            <p>{item.institution}</p>
-          </article>
-        ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="section-heading">
-      <p class="eyebrow">Professional</p>
-      <h2>Quantitative finance</h2>
-    </div>
-    <div class="timeline full-width">
-      {experience.map((item) => (
-        <article class="timeline-item">
-          <p class="timeline-period">{item.period}</p>
-          <h3><a href={item.href}>{item.organization}</a> · {item.title}</h3>
-          <p>{item.detail}</p>
+          </div>
         </article>
       ))}
     </div>
   </section>
 
-  <section class="section two-column balanced">
-    <article class="card">
-      <p class="eyebrow">Beyond school and work</p>
-      <h2>Fencing and community</h2>
-      <ul class="clean-list">
-        {outside.map((item) => <li>{item}</li>)}
-      </ul>
-    </article>
+  <section>
+    <h2>Professional experience</h2>
+    <div class="entry-list">
+      {experience.map((item) => (
+        <article class="dated-entry">
+          <p class="date">{item.period}</p>
+          <div>
+            <h3><a href={item.href}>{item.organization}</a></h3>
+            <p>{item.title}. {item.detail}.</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
 
-    <article class="card accent-card">
-      <p class="eyebrow">CV</p>
-      <h2>Available upon request</h2>
-      <p>
-        Please email <a href={`mailto:${profile.email}`}>{profile.email}</a> for a current CV.
-      </p>
-    </article>
+  <section>
+    <h2>Teaching</h2>
+    <div class="entry-list">
+      {teaching.map((item) => (
+        <article class="dated-entry">
+          <p class="date">{item.period}</p>
+          <div>
+            <h3><a href={item.href}>{item.course}</a></h3>
+            <p>{item.institution}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section>
+    <h2>Outside school and work</h2>
+    <ul>
+      {outside.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+
+  <section>
+    <h2>CV</h2>
+    <p>
+      Complete CV available upon request. Please email <a href={`mailto:${profile.email}`}>{profile.email}</a>.
+    </p>
   </section>
 </BaseLayout>

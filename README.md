@@ -19,6 +19,12 @@ make validate
 
 This runs the production Astro build and a small static output sanity check.
 
+## Design direction
+
+The current scaffold intentionally follows a plain professor/PhD personal-site style: narrow text-first pages, simple navigation, minimal decoration, and responsive single-column fallbacks for small windows.
+
+Design schematic: [`docs/site-schematic.svg`](docs/site-schematic.svg).
+
 ## Content choices in this scaffold
 
 - CV remains available upon request; no downloadable CV is published.

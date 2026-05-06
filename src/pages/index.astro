@@ -4,55 +4,67 @@ import { experience, profile, publications } from "../data/profile";
 
 const featuredPublication = publications[0];
 const nextRole = experience[0];
+const profileLinks = profile.links.filter((link) => link.label !== "Email");
 ---
 
-<BaseLayout title="Benjamin Shih | Academic and Quantitative Research" description={profile.description}>
-  <section class="hero two-column">
-    <div class="hero-copy">
-      <p class="eyebrow">Stanford ICME · Scientific ML · Quantitative Research</p>
-      <h1>{profile.name}</h1>
-      <p class="lede">{profile.summary}</p>
-      <div class="button-row">
-        <a class="button primary" href="/research/">Research</a>
-        <a class="button secondary" href={`mailto:${profile.email}`}>Email</a>
-      </div>
-    </div>
-    <aside class="portrait-card" aria-label="Profile summary">
-      <img src="/assets/headshot.png" alt="Benjamin Shih" class="portrait" loading="eager" />
-      <p class="portrait-caption">Graduate student, Stanford ICME</p>
-    </aside>
-  </section>
-
-  <section class="section grid-3" aria-label="Research interests">
-    {profile.interests.map((interest) => <article class="mini-card"><p>{interest}</p></article>)}
-  </section>
-
-  <section class="section two-column balanced">
-    <article class="card">
-      <p class="eyebrow">Featured publication</p>
-      <h2>{featuredPublication.title}</h2>
-      <p class="muted">{featuredPublication.authors}</p>
-      <p>{featuredPublication.venue} ({featuredPublication.year})</p>
-      <div class="link-row">
-        {featuredPublication.links.map((link) => <a href={link.href}>{link.label}</a>)}
-      </div>
-    </article>
-
-    <article class="card accent-card">
-      <p class="eyebrow">Professional direction</p>
-      <h2>{nextRole.title}</h2>
+<BaseLayout title="Benjamin Shih" description={profile.description}>
+  <section class="intro">
+    <div class="intro-text">
+      <h1>Benjamin Shih</h1>
       <p>
-        Joining <a href={nextRole.href}>{nextRole.organization}</a> in {nextRole.period} as a quantitative researcher in {nextRole.detail}.
+        I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. Previously, I received a B.S. with Honors in Applied Mathematics–Computer Science and a B.A. in Pure Mathematics from Brown University.
       </p>
-      <p class="muted">Previous internships span quantitative trading, macro relative value, and ML-driven alpha research.</p>
+      <p>
+        My interests span scientific and theoretical machine learning, approximation theory, high-dimensional statistics, and quantitative research.
+      </p>
+      <p class="contact-line">
+        Email: <a href={`mailto:${profile.email}`}>{profile.email}</a>
+      </p>
+      <p class="inline-links">
+        {profileLinks.map((link, index) => (
+          <>
+            <a href={link.href}>{link.label}</a>{index < profileLinks.length - 1 && <span> · </span>}
+          </>
+        ))}
+      </p>
+    </div>
+    <img src="/assets/headshot.png" alt="Benjamin Shih" class="profile-photo" loading="eager" />
+  </section>
+
+  <section>
+    <h2>Research interests</h2>
+    <ul>
+      {profile.interests.map((interest) => <li>{interest}</li>)}
+    </ul>
+  </section>
+
+  <section>
+    <h2>Selected research</h2>
+    <article class="publication">
+      <p>
+        <strong>{featuredPublication.authors}</strong>, “{featuredPublication.title},” <em>{featuredPublication.venue}</em>, {featuredPublication.year}.
+      </p>
+      <p class="inline-links">
+        {featuredPublication.links.map((link, index) => (
+          <>
+            <a href={link.href}>{link.label}</a>{index < featuredPublication.links.length - 1 && <span> · </span>}
+          </>
+        ))}
+      </p>
     </article>
   </section>
 
-  <section class="section callout">
-    <p class="eyebrow">CV</p>
-    <h2>CV available upon request</h2>
+  <section>
+    <h2>Professional background</h2>
     <p>
-      For a current CV or additional materials, please contact me at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
+      In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a {nextRole.title.toLowerCase()} in {nextRole.detail}. My previous internships span quantitative trading, macro relative value, and ML-driven alpha research.
+    </p>
+  </section>
+
+  <section>
+    <h2>CV</h2>
+    <p>
+      Complete CV available upon request. Please contact me at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
     </p>
   </section>
 </BaseLayout>

@@ -6,7 +6,6 @@ const dist = path.join(root, "dist");
 const requiredPages = ["index.html", "research/index.html", "background/index.html", "contact/index.html"];
 const requiredAssets = [
   "assets/headshot.png",
-  "assets/research-neural-operators.jpg",
   "assets/temporal-learning-capacity-thesis.pdf",
   "assets/temporal-learning-capacity-slides.pdf",
 ];
