@@ -3,9 +3,9 @@ export const profile = {
   shortName: "Ben Shih",
   email: "benjamin.shih@stanford.edu",
   description:
-    "Benjamin Shih is a graduate student with interests in scientific machine learning, mechanistic interpretability, and theoretical machine learning.",
+    "Benjamin Shih is a graduate student working on mechanistic interpretability, scientific machine learning, and theoretical machine learning.",
   summary:
-    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My interests sit at the intersection of scientific machine learning, mechanistic interpretability, and theoretical machine learning.",
+    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My current research is in mechanistic interpretability, with broader interests in scientific and theoretical machine learning.",
   location: "Stanford, California",
   interests: [
     "Scientific ML",
@@ -81,6 +81,14 @@ export const talks = [
 ];
 
 export const researchHistory = [
+  {
+    label: "Mechanistic interpretability",
+    description:
+      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study how language models organize features, using interpretable models and sparse representations to investigate phenomena such as feature hierarchy and feature absorption.",
+    links: [
+      { label: "Eric Darve", href: "https://profiles.stanford.edu/eric-darve" },
+    ],
+  },
   {
     label: "Neural operators and scientific machine learning",
     description:
@@ -159,6 +167,6 @@ export const teaching = [
 ];
 
 export const outside = [
-  "Fenced for the Taiwanese national team since 2017 and competed for Brown and Stanford.",
+  "Fenced for the Taiwanese national team since 2017, competed for Brown and Stanford, and served as captain of the Stanford team.",
   "Served as President of the Brown Poker Club during the 2023–24 academic year.",
 ];

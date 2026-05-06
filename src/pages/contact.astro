@@ -8,13 +8,12 @@ const profileLinks = profile.links.filter((link) => link.label !== "Email");
 <BaseLayout title="Contact | Benjamin Shih" description="Contact links for Benjamin Shih.">
   <header class="page-heading">
     <h1>Contact</h1>
-    <p>For research questions, collaboration, or CV requests, Stanford email is the best contact address.</p>
+    <p>For research questions or collaboration, Stanford email is the best contact address.</p>
   </header>
 
   <section>
     <h2>Email</h2>
     <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>
-    <p>CV and additional materials are available upon request.</p>
   </section>
 
   <section>

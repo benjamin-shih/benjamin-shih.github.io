@@ -31,8 +31,8 @@ import { education, experience, outside, teaching } from "../data/profile";
         <article class="dated-entry">
           <p class="date">{item.period}</p>
           <div>
-            <h3><a href={item.href}>{item.organization}</a></h3>
-            <p>{item.title}. {item.detail}.</p>
+            <h3><a href={item.href}>{item.organization}</a> <em>{item.title}</em></h3>
+            <p>{item.detail}</p>
           </div>
         </article>
       ))}
