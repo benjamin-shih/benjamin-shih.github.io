@@ -128,7 +128,7 @@ export const experience = [
     period: "Summer 2025",
     organization: "Jump Trading",
     title: "Quantitative Research Intern",
-    detail: "ML + alpha research",
+    detail: "DL + Alpha research",
     href: "https://www.jumptrading.com/",
   },
   {
