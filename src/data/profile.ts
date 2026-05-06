@@ -3,9 +3,9 @@ export const profile = {
   shortName: "Ben Shih",
   email: "benjamin.shih@stanford.edu",
   description:
-    "Benjamin Shih is a graduate student working on mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
+    "Benjamin Shih is a graduate student in mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
   summary:
-    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My current research is in mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
+    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My research focuses on mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
   interests: [
     "Scientific ML",
     "Mech interp",
@@ -83,7 +83,7 @@ export const researchHistory = [
   {
     label: "Mechanistic interpretability",
     description:
-      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study how language models organize and use features, using interpretable models and sparse representations to investigate phenomena such as feature hierarchy and feature absorption.",
+      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study feature organization in language models, including hierarchy, absorption, and the interpretability tradeoffs of sparse representations.",
     links: [
       { label: "DASH Lab" },
       { label: "Eric Darve", href: "https://profiles.stanford.edu/eric-darve" },
