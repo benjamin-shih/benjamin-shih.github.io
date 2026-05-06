@@ -1,0 +1,58 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { experience, profile, publications } from "../data/profile";
+
+const featuredPublication = publications[0];
+const nextRole = experience[0];
+---
+
+<BaseLayout title="Benjamin Shih | Academic and Quantitative Research" description={profile.description}>
+  <section class="hero two-column">
+    <div class="hero-copy">
+      <p class="eyebrow">Stanford ICME · Scientific ML · Quantitative Research</p>
+      <h1>{profile.name}</h1>
+      <p class="lede">{profile.summary}</p>
+      <div class="button-row">
+        <a class="button primary" href="/research/">Research</a>
+        <a class="button secondary" href={`mailto:${profile.email}`}>Email</a>
+      </div>
+    </div>
+    <aside class="portrait-card" aria-label="Profile summary">
+      <img src="/assets/headshot.png" alt="Benjamin Shih" class="portrait" loading="eager" />
+      <p class="portrait-caption">Graduate student, Stanford ICME</p>
+    </aside>
+  </section>
+
+  <section class="section grid-3" aria-label="Research interests">
+    {profile.interests.map((interest) => <article class="mini-card"><p>{interest}</p></article>)}
+  </section>
+
+  <section class="section two-column balanced">
+    <article class="card">
+      <p class="eyebrow">Featured publication</p>
+      <h2>{featuredPublication.title}</h2>
+      <p class="muted">{featuredPublication.authors}</p>
+      <p>{featuredPublication.venue} ({featuredPublication.year})</p>
+      <div class="link-row">
+        {featuredPublication.links.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </article>
+
+    <article class="card accent-card">
+      <p class="eyebrow">Professional direction</p>
+      <h2>{nextRole.title}</h2>
+      <p>
+        Joining <a href={nextRole.href}>{nextRole.organization}</a> in {nextRole.period} as a quantitative researcher in {nextRole.detail}.
+      </p>
+      <p class="muted">Previous internships span quantitative trading, macro relative value, and ML-driven alpha research.</p>
+    </article>
+  </section>
+
+  <section class="section callout">
+    <p class="eyebrow">CV</p>
+    <h2>CV available upon request</h2>
+    <p>
+      For a current CV or additional materials, please contact me at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
+    </p>
+  </section>
+</BaseLayout>

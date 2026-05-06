@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { profile, publications, researchHistory, talks, thesis } from "../data/profile";
+---
+
+<BaseLayout title="Research | Benjamin Shih" description="Research interests, publications, thesis, and talks by Benjamin Shih.">
+  <section class="hero two-column">
+    <div class="hero-copy">
+      <p class="eyebrow">Research</p>
+      <h1>Scientific machine learning, approximation theory, and applications</h1>
+      <p class="lede">
+        My research interests lie in scientific and theoretical machine learning, approximation theory, and applications.
+      </p>
+    </div>
+    <img class="wide-image" src="/assets/research-neural-operators.jpg" alt="Academic research setting" loading="eager" />
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Publications</p>
+      <h2>Journal articles and preprints</h2>
+    </div>
+    <div class="stack">
+      {publications.map((paper) => (
+        <article class="card paper-card">
+          <p class="eyebrow">{paper.year} · {paper.venue}</p>
+          <h3>{paper.title}</h3>
+          <p class="muted">{paper.authors}</p>
+          <div class="link-row">
+            {paper.links.map((link) => <a href={link.href}>{link.label}</a>)}
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Thesis</p>
+      <h2>Bachelor's thesis</h2>
+    </div>
+    <article class="card paper-card">
+      <p class="eyebrow">{thesis.year} · {thesis.venue}</p>
+      <h3>{thesis.title}</h3>
+      <p class="muted">{thesis.authors}</p>
+      <div class="link-row">
+        {thesis.links.map((link) => <a href={link.href}>{link.label}</a>)}
+      </div>
+    </article>
+  </section>
+
+  <section class="section two-column balanced">
+    <div>
+      <div class="section-heading">
+        <p class="eyebrow">Research history</p>
+        <h2>Selected research threads</h2>
+      </div>
+      <div class="stack">
+        {researchHistory.map((item) => (
+          <article class="card compact-card">
+            <h3>{item.label}</h3>
+            <p>{item.description}</p>
+            <div class="link-row">
+              {item.links.map((link) => <a href={link.href}>{link.label}</a>)}
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <div class="section-heading">
+        <p class="eyebrow">Talks</p>
+        <h2>Presentations</h2>
+      </div>
+      <div class="stack">
+        {talks.map((talk) => (
+          <article class="card compact-card">
+            <h3>{talk.title}</h3>
+            <p class="muted">{talk.venue}, {talk.year}</p>
+          </article>
+        ))}
+      </div>
+      <article class="card compact-card soft-card">
+        <h3>Contact</h3>
+        <p>Questions about research or collaboration can be sent to <a href={`mailto:${profile.email}`}>{profile.email}</a>.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

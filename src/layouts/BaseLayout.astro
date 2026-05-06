@@ -1,0 +1,62 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Benjamin Shih",
+  description = "Academic and professional website for Benjamin Shih.",
+} = Astro.props;
+
+const navItems = [
+  { label: "Home", href: "/" },
+  { label: "Research", href: "/research/" },
+  { label: "Background", href: "/background/" },
+  { label: "Contact", href: "/contact/" },
+];
+
+const currentPath = Astro.url.pathname;
+const canonical = new URL(currentPath, Astro.site ?? "https://benjamin-shih.github.io");
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav-shell" aria-label="Primary navigation">
+        <a class="brand" href="/" aria-label="Benjamin Shih home">BS</a>
+        <div class="nav-links">
+          {navItems.map((item) => (
+            <a
+              href={item.href}
+              aria-current={currentPath === item.href || (item.href !== "/" && currentPath.startsWith(item.href)) ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="page-shell">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <p>© {new Date().getFullYear()} Benjamin Shih</p>
+      <p>Built as a static academic website for long-term portability.</p>
+    </footer>
+  </body>
+</html>

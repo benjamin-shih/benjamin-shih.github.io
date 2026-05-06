@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { education, experience, outside, profile, teaching } from "../data/profile";
+---
+
+<BaseLayout title="Background | Benjamin Shih" description="Education, professional experience, teaching, and selected background for Benjamin Shih.">
+  <section class="hero narrow-hero">
+    <p class="eyebrow">Background</p>
+    <h1>Academic training and quantitative research experience</h1>
+    <p class="lede">
+      A concise public background page. A complete CV is available upon request.
+    </p>
+  </section>
+
+  <section class="section two-column balanced">
+    <div>
+      <div class="section-heading">
+        <p class="eyebrow">Education</p>
+        <h2>Academic</h2>
+      </div>
+      <div class="timeline">
+        {education.map((item) => (
+          <article class="timeline-item">
+            <p class="timeline-period">{item.period}</p>
+            <h3>{item.institution}</h3>
+            <p>{item.degree}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+
+    <div>
+      <div class="section-heading">
+        <p class="eyebrow">Teaching</p>
+        <h2>Brown University</h2>
+      </div>
+      <div class="timeline">
+        {teaching.map((item) => (
+          <article class="timeline-item">
+            <p class="timeline-period">{item.period}</p>
+            <h3><a href={item.href}>{item.course}</a></h3>
+            <p>{item.institution}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-heading">
+      <p class="eyebrow">Professional</p>
+      <h2>Quantitative finance</h2>
+    </div>
+    <div class="timeline full-width">
+      {experience.map((item) => (
+        <article class="timeline-item">
+          <p class="timeline-period">{item.period}</p>
+          <h3><a href={item.href}>{item.organization}</a> · {item.title}</h3>
+          <p>{item.detail}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section two-column balanced">
+    <article class="card">
+      <p class="eyebrow">Beyond school and work</p>
+      <h2>Fencing and community</h2>
+      <ul class="clean-list">
+        {outside.map((item) => <li>{item}</li>)}
+      </ul>
+    </article>
+
+    <article class="card accent-card">
+      <p class="eyebrow">CV</p>
+      <h2>Available upon request</h2>
+      <p>
+        Please email <a href={`mailto:${profile.email}`}>{profile.email}</a> for a current CV.
+      </p>
+    </article>
+  </section>
+</BaseLayout>
