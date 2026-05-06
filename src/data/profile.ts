@@ -109,7 +109,10 @@ export const researchHistory = [
     label: "GWAS of neurodegenerative diseases",
     description:
       "Earlier research on genome-wide association studies of neurodegenerative diseases with Dr. Li-San Wang at the University of Pennsylvania Wang Lab.",
-    links: [{ label: "Wang Lab", href: "https://www.lisanwanglab.org/lswang/" }],
+    links: [
+      { label: "Wang Lab", href: "https://www.lisanwanglab.org/" },
+      { label: "Li-San Wang", href: "https://www.lisanwanglab.org/lswang/" },
+    ],
   },
 ];
 
