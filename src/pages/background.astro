@@ -27,13 +27,16 @@ import { education, experience, outside, teaching } from "../data/profile";
 
   <section>
     <h2>Industry experience</h2>
-    <div class="entry-list">
+    <div class="entry-list industry-list">
       {experience.map((item) => (
-        <article class="dated-entry">
+        <article class="dated-entry industry-entry">
           <p class="date">{item.period}</p>
           <div>
-            <h3><a href={item.href}>{item.organization}</a> <em>{item.title}</em></h3>
-            {item.detail !== "New York" && <p>{item.detail}</p>}
+            <h3><a href={item.href}>{item.organization}</a></h3>
+            <p class="industry-role">{item.title}</p>
+            {item.detail !== "New York" && (
+              <p class="industry-detail"><span>Focus</span>{item.detail}</p>
+            )}
           </div>
         </article>
       ))}
