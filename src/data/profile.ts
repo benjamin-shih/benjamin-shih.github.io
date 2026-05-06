@@ -84,7 +84,7 @@ export const researchHistory = [
   {
     label: "Mechanistic interpretability",
     description:
-      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study how language models organize features, using interpretable models and sparse representations to investigate phenomena such as feature hierarchy and feature absorption.",
+      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study how language models organize and use features, using interpretable models and sparse representations to investigate phenomena such as feature hierarchy and feature absorption.",
     links: [
       { label: "Eric Darve", href: "https://profiles.stanford.edu/eric-darve" },
     ],
