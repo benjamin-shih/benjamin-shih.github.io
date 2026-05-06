@@ -36,7 +36,7 @@ export const education = [
   {
     institution: "Brown University",
     degree:
-      "B.S. with Honors in APMA-CS; B.A. in Math",
+      "B.S. with Honors in Applied Mathematics–Computer Science; B.A. in Mathematics",
     period: "Completed 2024",
   },
 ];
