@@ -3,20 +3,18 @@ export const profile = {
   shortName: "Ben Shih",
   email: "benjamin.shih@stanford.edu",
   description:
-    "Benjamin Shih is a graduate student at Stanford ICME with interests in scientific machine learning, neural operators, approximation theory, and quantitative research.",
+    "Benjamin Shih is a graduate student with interests in scientific machine learning, neural operators, approximation theory, and mechanistic interpretability.",
   summary:
-    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My interests sit at the intersection of scientific machine learning, neural operators, approximation theory, and quantitative research.",
-  affiliation: "Stanford Institute for Computational and Mathematical Engineering",
+    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My interests sit at the intersection of scientific machine learning, neural operators, approximation theory, and mechanistic interpretability.",
   location: "Stanford, California",
   interests: [
     "Scientific machine learning and neural operators",
     "Approximation theory and finite-regularity analysis",
-    "High-dimensional statistics and quantitative research",
+    "High-dimensional statistics and mechanistic interpretability",
   ],
   links: [
     { label: "Email", href: "mailto:benjamin.shih@stanford.edu" },
-    { label: "Stanford Profile", href: "https://profiles.stanford.edu/benjamin-shih" },
-    { label: "ICME", href: "https://icme.stanford.edu/people/benjamin-shih" },
+    { label: "ICME Profile", href: "https://icme.stanford.edu/people/benjamin-shih" },
     {
       label: "Google Scholar",
       href: "https://scholar.google.com/citations?user=sf7qiQ8AAAAJ&hl=en",

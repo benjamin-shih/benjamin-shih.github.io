@@ -207,16 +207,6 @@ section:first-child,
   border-top: 0;
 }
 
-.kicker {
-  margin-bottom: 0.4rem;
-  color: var(--accent);
-  font-family: var(--sans);
-  font-size: 0.76rem;
-  font-weight: 700;
-  letter-spacing: 0;
-  text-transform: uppercase;
-}
-
 .profile-rail {
   padding-left: 1.8rem;
   border-left: 1px solid var(--rule);

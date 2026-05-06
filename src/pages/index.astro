@@ -11,10 +11,9 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
   <div class="home-layout">
     <div class="home-main">
       <section class="intro">
-        <p class="kicker">Stanford ICME</p>
         <h1>Benjamin Shih</h1>
         <p class="lede">
-          I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering, with interests in scientific machine learning, neural operators, approximation theory, and quantitative research.
+          I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering, with interests in scientific machine learning, neural operators, approximation theory, and mechanistic interpretability. In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a Quantitative Researcher in {nextRole.detail}.
         </p>
         <p>
           Previously, I received a B.S. with Honors in Applied Mathematics–Computer Science and a B.A. in Pure Mathematics from Brown University.
@@ -66,13 +65,6 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
       </section>
 
       <section>
-        <h2>Professional background</h2>
-        <p>
-          In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a quantitative researcher in {nextRole.detail}. Previous internships span quantitative trading, macro relative value, and ML-driven alpha research.
-        </p>
-      </section>
-
-      <section>
         <h2>CV</h2>
         <p>
           Complete CV available upon request. Please contact me at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
@@ -87,11 +79,6 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
         <h2>Contact</h2>
         <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>
         <p>{profile.location}</p>
-      </div>
-
-      <div class="rail-section">
-        <h2>Affiliation</h2>
-        <p>{profile.affiliation}</p>
       </div>
 
       <div class="rail-section">

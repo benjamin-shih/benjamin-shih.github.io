@@ -1,13 +1,13 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { profile, publications, researchHistory, talks, thesis } from "../data/profile";
+import { publications, researchHistory, talks, thesis } from "../data/profile";
 ---
 
 <BaseLayout title="Research | Benjamin Shih" description="Research interests, publications, thesis, and talks by Benjamin Shih.">
   <header class="page-heading">
     <h1>Research</h1>
     <p>
-      I am interested in scientific and theoretical machine learning, neural operators, approximation theory, and applications to complex dynamical systems.
+      I am interested in scientific and theoretical machine learning, neural operators, approximation theory, mechanistic interpretability, and applications to complex dynamical systems.
     </p>
   </header>
 
@@ -78,10 +78,4 @@ import { profile, publications, researchHistory, talks, thesis } from "../data/p
     </ul>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      For research questions or collaboration, email <a href={`mailto:${profile.email}`}>{profile.email}</a>. Additional profile links are listed on the contact page.
-    </p>
-  </section>
 </BaseLayout>

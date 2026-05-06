@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { education, experience, outside, profile, teaching } from "../data/profile";
+import { education, experience, outside, teaching } from "../data/profile";
 ---
 
 <BaseLayout title="Background | Benjamin Shih" description="Education, professional experience, teaching, and selected background for Benjamin Shih.">
@@ -61,10 +61,4 @@ import { education, experience, outside, profile, teaching } from "../data/profi
     </ul>
   </section>
 
-  <section>
-    <h2>CV</h2>
-    <p>
-      Complete CV available upon request. Please email <a href={`mailto:${profile.email}`}>{profile.email}</a>.
-    </p>
-  </section>
 </BaseLayout>
