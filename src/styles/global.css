@@ -54,16 +54,6 @@ h2 {
   font-size: 1.55rem;
 }
 
-section > h2::after {
-  content: "";
-  display: block;
-  width: 2rem;
-  height: 1px;
-  margin-top: 0.35rem;
-  background: var(--accent);
-  opacity: 0.65;
-}
-
 h3 {
   margin: 0 0 0.2rem;
   font-size: 1.16rem;
