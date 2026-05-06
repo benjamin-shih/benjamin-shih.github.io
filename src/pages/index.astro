@@ -13,7 +13,7 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
       <section class="intro">
         <h1>Benjamin Shih</h1>
         <p class="lede">
-          I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering, with interests in scientific machine learning, neural operators, approximation theory, and mechanistic interpretability. In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a Quantitative Researcher in {nextRole.detail}.
+          I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering, with interests in scientific machine learning, mechanistic interpretability, and theoretical machine learning. In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a Quantitative Researcher in {nextRole.detail}.
         </p>
         <p>
           Previously, I received a B.S. with Honors in Applied Mathematics–Computer Science and a B.A. in Pure Mathematics from Brown University.
@@ -22,7 +22,7 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
 
       <section>
         <h2>Research interests</h2>
-        <ul class="compact-list">
+        <ul class="interest-tabs" aria-label="Research interests">
           {profile.interests.map((interest) => <li>{interest}</li>)}
         </ul>
       </section>

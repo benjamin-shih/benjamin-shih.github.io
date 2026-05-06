@@ -14,13 +14,13 @@
 
     <line x1="528" y1="64" x2="528" y2="520" stroke="#d7d1c7"/>
     <text x="28" y="146" font-family="Garamond, Georgia, serif" font-size="42" font-weight="500" fill="#17130f">Benjamin Shih</text>
-    <text x="28" y="188" font-family="Garamond, Georgia, serif" font-size="17" fill="#17130f">Scientific ML, neural operators, approximation theory,</text>
-    <text x="28" y="210" font-family="Garamond, Georgia, serif" font-size="17" fill="#17130f">mechanistic interpretability, and future QR at Jump.</text>
+    <text x="28" y="188" font-family="Garamond, Georgia, serif" font-size="17" fill="#17130f">Scientific ML, mech interp, theoretical ML,</text>
+    <text x="28" y="210" font-family="Garamond, Georgia, serif" font-size="17" fill="#17130f">and future QR at Jump.</text>
     <line x1="28" y1="262" x2="492" y2="262" stroke="#d7d1c7"/>
 
     <text x="28" y="304" font-family="Garamond, Georgia, serif" font-size="24" font-weight="500" fill="#17130f">Research Interests</text>
-    <text x="28" y="334" font-family="Garamond, Georgia, serif" font-size="16" fill="#17130f">Scientific ML and neural operators</text>
-    <text x="28" y="358" font-family="Garamond, Georgia, serif" font-size="16" fill="#17130f">Approximation theory and finite-regularity analysis</text>
+    <text x="28" y="334" font-family="Garamond, Georgia, serif" font-size="16" fill="#17130f">[ Scientific ML ] [ Mech interp ] [ Theoretical ML ]</text>
+    <text x="28" y="358" font-family="Garamond, Georgia, serif" font-size="16" fill="#17130f">compact tab-style interest labels</text>
 
     <line x1="28" y1="392" x2="492" y2="392" stroke="#d7d1c7"/>
     <text x="28" y="432" font-family="Garamond, Georgia, serif" font-size="24" font-weight="500" fill="#17130f">Selected Research</text>
@@ -45,8 +45,8 @@
     <text x="24" y="35" font-family="Garamond, Georgia, serif" font-size="21" font-weight="500" fill="#17130f">Benjamin Shih</text>
     <text x="24" y="58" font-family="Arial, sans-serif" font-size="12" fill="#686058">Home  Research  Background</text>
     <text x="24" y="134" font-family="Garamond, Georgia, serif" font-size="30" font-weight="500" fill="#17130f">Benjamin Shih</text>
-    <text x="24" y="188" font-family="Garamond, Georgia, serif" font-size="14" fill="#17130f">Scientific ML, neural operators,</text>
-    <text x="24" y="208" font-family="Garamond, Georgia, serif" font-size="14" fill="#17130f">and approximation theory.</text>
+    <text x="24" y="188" font-family="Garamond, Georgia, serif" font-size="14" fill="#17130f">Scientific ML, mech interp,</text>
+    <text x="24" y="208" font-family="Garamond, Georgia, serif" font-size="14" fill="#17130f">and theoretical ML.</text>
     <line x1="24" y1="240" x2="226" y2="240" stroke="#d7d1c7"/>
     <text x="24" y="278" font-family="Garamond, Georgia, serif" font-size="20" font-weight="500" fill="#17130f">Selected Research</text>
     <text x="24" y="306" font-family="Garamond, Georgia, serif" font-size="13" fill="#17130f">Publication row</text>

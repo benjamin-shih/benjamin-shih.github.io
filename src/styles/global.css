@@ -245,8 +245,22 @@ section:first-child,
   margin-bottom: 0.45rem;
 }
 
-.compact-list {
-  columns: 1;
+.interest-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+.interest-tabs li {
+  padding: 0.22rem 0.65rem 0.28rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 0.82rem;
 }
 
 .plain-link-list {
