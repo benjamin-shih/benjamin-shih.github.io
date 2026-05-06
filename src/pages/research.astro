@@ -7,21 +7,30 @@ import { profile, publications, researchHistory, talks, thesis } from "../data/p
   <header class="page-heading">
     <h1>Research</h1>
     <p>
-      My research interests lie in scientific and theoretical machine learning, approximation theory, and applications.
+      I am interested in scientific and theoretical machine learning, neural operators, approximation theory, and applications to complex dynamical systems.
     </p>
   </header>
+
+  <section>
+    <h2>Current focus</h2>
+    <p>
+      My current work focuses on learning solution operators for differential equations under finite regularity assumptions, and on understanding how approximation-theoretic structure affects generalization, sample efficiency, and model design.
+    </p>
+  </section>
 
   <section>
     <h2>Publications</h2>
     {publications.map((paper) => (
       <article class="publication">
-        <p>
-          <strong>{paper.authors}</strong>, “{paper.title},” <em>{paper.venue}</em>, {paper.year}.
+        <p class="publication-title">{paper.title}</p>
+        <p>{paper.authors}</p>
+        <p class="publication-meta">
+          <em>{paper.venue}</em>, {paper.detail}, {paper.year}.
         </p>
         <p class="inline-links">
           {paper.links.map((link, index) => (
             <>
-              <a href={link.href}>{link.label}</a>{index < paper.links.length - 1 && <span> · </span>}
+              <a href={link.href}>{link.label}</a>{index < paper.links.length - 1 && <span> / </span>}
             </>
           ))}
         </p>
@@ -32,13 +41,13 @@ import { profile, publications, researchHistory, talks, thesis } from "../data/p
   <section>
     <h2>Bachelor's thesis</h2>
     <article class="publication">
-      <p>
-        <strong>{thesis.authors}</strong>, “{thesis.title},” {thesis.venue}, {thesis.year}.
-      </p>
+      <p class="publication-title">{thesis.title}</p>
+      <p>{thesis.authors}</p>
+      <p class="publication-meta">{thesis.venue}, {thesis.year}.</p>
       <p class="inline-links">
         {thesis.links.map((link, index) => (
           <>
-            <a href={link.href}>{link.label}</a>{index < thesis.links.length - 1 && <span> · </span>}
+            <a href={link.href}>{link.label}</a>{index < thesis.links.length - 1 && <span> / </span>}
           </>
         ))}
       </p>
@@ -54,7 +63,7 @@ import { profile, publications, researchHistory, talks, thesis } from "../data/p
         <p class="inline-links">
           {item.links.map((link, index) => (
             <>
-              <a href={link.href}>{link.label}</a>{index < item.links.length - 1 && <span> · </span>}
+              <a href={link.href}>{link.label}</a>{index < item.links.length - 1 && <span> / </span>}
             </>
           ))}
         </p>
@@ -72,7 +81,7 @@ import { profile, publications, researchHistory, talks, thesis } from "../data/p
   <section>
     <h2>Contact</h2>
     <p>
-      Questions about research or collaboration can be sent to <a href={`mailto:${profile.email}`}>{profile.email}</a>.
+      For research questions or collaboration, email <a href={`mailto:${profile.email}`}>{profile.email}</a>. Additional profile links are listed on the contact page.
     </p>
   </section>
 </BaseLayout>

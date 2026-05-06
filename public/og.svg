@@ -1,9 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
-  <rect width="1200" height="630" fill="#f7f3ee"/>
-  <rect x="72" y="72" width="1056" height="486" rx="32" fill="#ffffff" stroke="#d8c7bd"/>
-  <text x="120" y="230" font-family="Georgia, serif" font-size="76" font-weight="700" fill="#2f1f1d">Benjamin Shih</text>
-  <text x="120" y="320" font-family="Inter, Arial, sans-serif" font-size="34" fill="#604c43">Scientific machine learning · Approximation theory</text>
-  <text x="120" y="374" font-family="Inter, Arial, sans-serif" font-size="34" fill="#604c43">Quantitative research</text>
-  <line x1="120" y1="430" x2="520" y2="430" stroke="#8c2d24" stroke-width="6"/>
-  <text x="120" y="492" font-family="Inter, Arial, sans-serif" font-size="26" fill="#735f55">Stanford ICME</text>
+  <rect width="1200" height="630" fill="#fbfbf8"/>
+  <line x1="96" y1="104" x2="1104" y2="104" stroke="#d7d1c7" stroke-width="2"/>
+  <text x="96" y="82" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#8a2b25">STANFORD ICME</text>
+  <text x="96" y="238" font-family="Garamond, 'Iowan Old Style', Georgia, serif" font-size="92" font-weight="500" fill="#17130f">Benjamin Shih</text>
+  <text x="96" y="322" font-family="Garamond, 'Iowan Old Style', Georgia, serif" font-size="40" fill="#17130f">Scientific machine learning, neural operators,</text>
+  <text x="96" y="374" font-family="Garamond, 'Iowan Old Style', Georgia, serif" font-size="40" fill="#17130f">approximation theory, and quantitative research</text>
+  <line x1="96" y1="430" x2="740" y2="430" stroke="#d7d1c7" stroke-width="2"/>
+  <text x="96" y="496" font-family="Arial, sans-serif" font-size="25" fill="#686058">Stanford Institute for Computational and Mathematical Engineering</text>
 </svg>

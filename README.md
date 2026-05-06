@@ -21,7 +21,7 @@ This runs the production Astro build and a small static output sanity check.
 
 ## Design direction
 
-The current scaffold intentionally follows a plain professor/PhD personal-site style: narrow text-first pages, simple navigation, minimal decoration, and responsive single-column fallbacks for small windows.
+The current site follows a plain academic/professor-site style: narrow text-first pages, simple navigation, rule-separated sections, a modest profile rail, and responsive single-column fallbacks for small windows.
 
 Design schematic: [`docs/site-schematic.svg`](docs/site-schematic.svg).
 
@@ -29,7 +29,7 @@ Design schematic: [`docs/site-schematic.svg`](docs/site-schematic.svg).
 
 - CV remains available upon request; no downloadable CV is published.
 - Stanford email is used for launch.
-- Tone balances academic research and quantitative/professional background.
+- Tone is objective and factual, leads with academic research, and keeps quantitative/professional background secondary.
 - No GitHub repositories are featured yet.
 
 ## Later deployment phase

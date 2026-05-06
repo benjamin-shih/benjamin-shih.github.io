@@ -1,50 +1,61 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Plain academic personal website schematic</title>
+  <title id="title">Academic personal website schematic</title>
   <desc id="desc">Wireframe showing a desktop and mobile layout for a professor or PhD style academic website.</desc>
-  <rect width="1200" height="760" fill="#f8f8f6"/>
-  <text x="70" y="58" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#1d1d1b">Schematic: plain academic / PhD personal site</text>
-  <text x="70" y="90" font-family="Arial, sans-serif" font-size="16" fill="#555">Desktop: narrow content column, text-first, simple nav, modest photo. Mobile: single-column stack.</text>
+  <rect width="1200" height="760" fill="#fbfbf8"/>
+  <text x="70" y="58" font-family="Arial, sans-serif" font-size="26" font-weight="700" fill="#17130f">Schematic: plain academic personal site</text>
+  <text x="70" y="90" font-family="Arial, sans-serif" font-size="16" fill="#686058">Desktop: narrow reading column with a modest profile rail. Mobile: single-column stack.</text>
 
   <g transform="translate(70 135)">
     <text x="0" y="-18" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#333">Desktop</text>
-    <rect x="0" y="0" width="760" height="520" fill="#ffffff" stroke="#b9b9b0" stroke-width="2"/>
-    <line x1="0" y1="64" x2="760" y2="64" stroke="#d8d8d0"/>
-    <text x="28" y="40" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#111">Benjamin Shih</text>
-    <text x="520" y="40" font-family="Arial, sans-serif" font-size="14" fill="#555">Home · Research · Background · Contact</text>
+    <rect x="0" y="0" width="760" height="520" fill="#fffffc" stroke="#d7d1c7" stroke-width="2"/>
+    <line x1="0" y1="64" x2="760" y2="64" stroke="#d7d1c7"/>
+    <text x="28" y="40" font-family="Garamond, Georgia, serif" font-size="26" font-weight="500" fill="#17130f">Benjamin Shih</text>
+    <text x="468" y="40" font-family="Arial, sans-serif" font-size="13" fill="#686058">HOME   RESEARCH   BACKGROUND   CONTACT</text>
 
-    <rect x="28" y="102" width="142" height="166" fill="#ecece6" stroke="#cfcfc7"/>
-    <text x="53" y="190" font-family="Arial, sans-serif" font-size="14" fill="#666">photo</text>
-    <text x="200" y="122" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#111">Benjamin Shih</text>
-    <text x="200" y="154" font-family="Arial, sans-serif" font-size="16" fill="#333">Graduate student, Stanford ICME</text>
-    <text x="200" y="184" font-family="Arial, sans-serif" font-size="15" fill="#444">Scientific machine learning, approximation theory,</text>
-    <text x="200" y="206" font-family="Arial, sans-serif" font-size="15" fill="#444">and quantitative research.</text>
-    <line x1="200" y1="230" x2="680" y2="230" stroke="#e3e3dc"/>
-    <text x="200" y="258" font-family="Arial, sans-serif" font-size="14" fill="#7b1e1e">Email · GitHub · LinkedIn · ORCID · Google Scholar</text>
+    <line x1="528" y1="64" x2="528" y2="520" stroke="#d7d1c7"/>
+    <text x="28" y="118" font-family="Arial, sans-serif" font-size="13" font-weight="700" fill="#8a2b25">STANFORD ICME</text>
+    <text x="28" y="168" font-family="Garamond, Georgia, serif" font-size="42" font-weight="500" fill="#17130f">Benjamin Shih</text>
+    <text x="28" y="204" font-family="Garamond, Georgia, serif" font-size="17" fill="#17130f">Graduate student working on scientific machine learning,</text>
+    <text x="28" y="226" font-family="Garamond, Georgia, serif" font-size="17" fill="#17130f">neural operators, approximation theory, and quantitative research.</text>
+    <line x1="28" y1="262" x2="492" y2="262" stroke="#d7d1c7"/>
 
-    <text x="28" y="326" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#111">Research</text>
-    <text x="28" y="356" font-family="Arial, sans-serif" font-size="15" fill="#444">• Transformers as Neural Operators for Solutions of Differential Equations...</text>
-    <text x="28" y="382" font-family="Arial, sans-serif" font-size="15" fill="#444">• Temporal Learning Capacity of Transformers in Non-Markovian Dynamical Systems</text>
+    <text x="28" y="304" font-family="Garamond, Georgia, serif" font-size="24" font-weight="500" fill="#17130f">Research Interests</text>
+    <text x="28" y="334" font-family="Garamond, Georgia, serif" font-size="16" fill="#17130f">Scientific ML and neural operators</text>
+    <text x="28" y="358" font-family="Garamond, Georgia, serif" font-size="16" fill="#17130f">Approximation theory and finite-regularity analysis</text>
 
-    <text x="28" y="432" font-family="Georgia, serif" font-size="22" font-weight="700" fill="#111">Background</text>
-    <text x="28" y="462" font-family="Arial, sans-serif" font-size="15" fill="#444">Education · Quantitative research internships · Teaching · CV available upon request</text>
+    <line x1="28" y1="392" x2="492" y2="392" stroke="#d7d1c7"/>
+    <text x="28" y="432" font-family="Garamond, Georgia, serif" font-size="24" font-weight="500" fill="#17130f">Selected Research</text>
+    <text x="28" y="462" font-family="Garamond, Georgia, serif" font-size="16" font-weight="600" fill="#17130f">Transformers as Neural Operators...</text>
+    <text x="28" y="486" font-family="Garamond, Georgia, serif" font-size="15" fill="#686058">CMAE, Vol. 434, Article 117560, 2025</text>
+
+    <rect x="562" y="100" width="150" height="150" fill="#f1eee6" stroke="#d7d1c7"/>
+    <text x="610" y="182" font-family="Arial, sans-serif" font-size="14" fill="#686058">photo</text>
+    <text x="562" y="296" font-family="Garamond, Georgia, serif" font-size="21" font-weight="500" fill="#17130f">Contact</text>
+    <text x="562" y="326" font-family="Arial, sans-serif" font-size="13" fill="#0a5270">email</text>
+    <text x="562" y="350" font-family="Arial, sans-serif" font-size="13" fill="#686058">Stanford, California</text>
+    <line x1="562" y1="382" x2="712" y2="382" stroke="#ebe5da"/>
+    <text x="562" y="422" font-family="Garamond, Georgia, serif" font-size="21" font-weight="500" fill="#17130f">Academic Links</text>
+    <text x="562" y="452" font-family="Arial, sans-serif" font-size="13" fill="#0b5863">Stanford Profile</text>
+    <text x="562" y="476" font-family="Arial, sans-serif" font-size="13" fill="#0b5863">ICME / Scholar / ORCID</text>
   </g>
 
   <g transform="translate(900 135)">
     <text x="0" y="-18" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#333">Mobile</text>
-    <rect x="0" y="0" width="250" height="520" rx="26" fill="#ffffff" stroke="#b9b9b0" stroke-width="2"/>
-    <line x1="0" y1="72" x2="250" y2="72" stroke="#d8d8d0"/>
-    <text x="24" y="35" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#111">Benjamin Shih</text>
-    <text x="24" y="58" font-family="Arial, sans-serif" font-size="12" fill="#555">Home · Research · More</text>
-    <rect x="24" y="102" width="78" height="92" fill="#ecece6" stroke="#cfcfc7"/>
-    <text x="43" y="151" font-family="Arial, sans-serif" font-size="12" fill="#666">photo</text>
-    <text x="24" y="232" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#111">Benjamin Shih</text>
-    <text x="24" y="260" font-family="Arial, sans-serif" font-size="13" fill="#444">Graduate student, Stanford ICME.</text>
-    <text x="24" y="282" font-family="Arial, sans-serif" font-size="13" fill="#444">Scientific ML and quant research.</text>
-    <line x1="24" y1="310" x2="226" y2="310" stroke="#e3e3dc"/>
-    <text x="24" y="346" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#111">Research</text>
-    <text x="24" y="374" font-family="Arial, sans-serif" font-size="12" fill="#444">Publication card</text>
-    <text x="24" y="398" font-family="Arial, sans-serif" font-size="12" fill="#444">Thesis links</text>
-    <text x="24" y="446" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#111">Background</text>
-    <text x="24" y="474" font-family="Arial, sans-serif" font-size="12" fill="#444">Timeline becomes stacked list</text>
+    <rect x="0" y="0" width="250" height="520" rx="26" fill="#fffffc" stroke="#d7d1c7" stroke-width="2"/>
+    <line x1="0" y1="72" x2="250" y2="72" stroke="#d7d1c7"/>
+    <text x="24" y="35" font-family="Garamond, Georgia, serif" font-size="21" font-weight="500" fill="#17130f">Benjamin Shih</text>
+    <text x="24" y="58" font-family="Arial, sans-serif" font-size="12" fill="#686058">Home  Research  Background</text>
+    <text x="24" y="116" font-family="Arial, sans-serif" font-size="11" font-weight="700" fill="#8a2b25">STANFORD ICME</text>
+    <text x="24" y="154" font-family="Garamond, Georgia, serif" font-size="30" font-weight="500" fill="#17130f">Benjamin Shih</text>
+    <text x="24" y="188" font-family="Garamond, Georgia, serif" font-size="14" fill="#17130f">Scientific ML, neural operators,</text>
+    <text x="24" y="208" font-family="Garamond, Georgia, serif" font-size="14" fill="#17130f">and approximation theory.</text>
+    <line x1="24" y1="240" x2="226" y2="240" stroke="#d7d1c7"/>
+    <text x="24" y="278" font-family="Garamond, Georgia, serif" font-size="20" font-weight="500" fill="#17130f">Selected Research</text>
+    <text x="24" y="306" font-family="Garamond, Georgia, serif" font-size="13" fill="#17130f">Publication row</text>
+    <text x="24" y="330" font-family="Garamond, Georgia, serif" font-size="13" fill="#17130f">Thesis row</text>
+    <line x1="24" y1="362" x2="226" y2="362" stroke="#d7d1c7"/>
+    <rect x="24" y="392" width="72" height="72" fill="#f1eee6" stroke="#d7d1c7"/>
+    <text x="112" y="414" font-family="Garamond, Georgia, serif" font-size="18" font-weight="500" fill="#17130f">Profile rail</text>
+    <text x="112" y="438" font-family="Arial, sans-serif" font-size="12" fill="#0a5270">Email and links</text>
   </g>
 </svg>

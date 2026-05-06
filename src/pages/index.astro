@@ -1,70 +1,105 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { experience, profile, publications } from "../data/profile";
+import { experience, profile, publications, thesis } from "../data/profile";
 
 const featuredPublication = publications[0];
 const nextRole = experience[0];
-const profileLinks = profile.links.filter((link) => link.label !== "Email");
+const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].includes(link.label));
 ---
 
 <BaseLayout title="Benjamin Shih" description={profile.description}>
-  <section class="intro">
-    <div class="intro-text">
-      <h1>Benjamin Shih</h1>
-      <p>
-        I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. Previously, I received a B.S. with Honors in Applied Mathematics–Computer Science and a B.A. in Pure Mathematics from Brown University.
-      </p>
-      <p>
-        My interests span scientific and theoretical machine learning, approximation theory, high-dimensional statistics, and quantitative research.
-      </p>
-      <p class="contact-line">
-        Email: <a href={`mailto:${profile.email}`}>{profile.email}</a>
-      </p>
-      <p class="inline-links">
-        {profileLinks.map((link, index) => (
-          <>
-            <a href={link.href}>{link.label}</a>{index < profileLinks.length - 1 && <span> · </span>}
-          </>
-        ))}
-      </p>
+  <div class="home-layout">
+    <div class="home-main">
+      <section class="intro">
+        <p class="kicker">Stanford ICME</p>
+        <h1>Benjamin Shih</h1>
+        <p class="lede">
+          I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering, with interests in scientific machine learning, neural operators, approximation theory, and quantitative research.
+        </p>
+        <p>
+          Previously, I received a B.S. with Honors in Applied Mathematics–Computer Science and a B.A. in Pure Mathematics from Brown University.
+        </p>
+      </section>
+
+      <section>
+        <h2>Research interests</h2>
+        <ul class="compact-list">
+          {profile.interests.map((interest) => <li>{interest}</li>)}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Selected research</h2>
+        <article class="publication">
+          <p class="publication-title">{featuredPublication.title}</p>
+          <p>{featuredPublication.authors}</p>
+          <p class="publication-meta">
+            <em>{featuredPublication.venue}</em>, {featuredPublication.detail}, {featuredPublication.year}.
+          </p>
+          <p class="inline-links">
+            {featuredPublication.links.map((link, index) => (
+              <>
+                <a href={link.href}>{link.label}</a>{index < featuredPublication.links.length - 1 && <span> / </span>}
+              </>
+            ))}
+          </p>
+        </article>
+        <article class="publication">
+          <p class="publication-title">{thesis.title}</p>
+          <p>{thesis.authors}</p>
+          <p class="publication-meta">{thesis.venue}, {thesis.year}.</p>
+          <p class="inline-links">
+            {thesis.links.map((link, index) => (
+              <>
+                <a href={link.href}>{link.label}</a>{index < thesis.links.length - 1 && <span> / </span>}
+              </>
+            ))}
+          </p>
+        </article>
+      </section>
+
+      <section>
+        <h2>Research direction</h2>
+        <p>
+          My recent work studies transformer-based neural operators for differential equations with finite regularity, with emphasis on settings where smoothness, dimension, and operator structure affect approximation and generalization.
+        </p>
+      </section>
+
+      <section>
+        <h2>Professional background</h2>
+        <p>
+          In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a quantitative researcher in {nextRole.detail}. Previous internships span quantitative trading, macro relative value, and ML-driven alpha research.
+        </p>
+      </section>
+
+      <section>
+        <h2>CV</h2>
+        <p>
+          Complete CV available upon request. Please contact me at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
+        </p>
+      </section>
     </div>
-    <img src="/assets/headshot.png" alt="Benjamin Shih" class="profile-photo" loading="eager" />
-  </section>
 
-  <section>
-    <h2>Research interests</h2>
-    <ul>
-      {profile.interests.map((interest) => <li>{interest}</li>)}
-    </ul>
-  </section>
+    <aside class="profile-rail" aria-label="Profile details">
+      <img src="/assets/headshot.png" alt="Benjamin Shih" class="profile-photo" loading="eager" />
 
-  <section>
-    <h2>Selected research</h2>
-    <article class="publication">
-      <p>
-        <strong>{featuredPublication.authors}</strong>, “{featuredPublication.title},” <em>{featuredPublication.venue}</em>, {featuredPublication.year}.
-      </p>
-      <p class="inline-links">
-        {featuredPublication.links.map((link, index) => (
-          <>
-            <a href={link.href}>{link.label}</a>{index < featuredPublication.links.length - 1 && <span> · </span>}
-          </>
-        ))}
-      </p>
-    </article>
-  </section>
+      <div class="rail-section">
+        <h2>Contact</h2>
+        <p><a href={`mailto:${profile.email}`}>{profile.email}</a></p>
+        <p>{profile.location}</p>
+      </div>
 
-  <section>
-    <h2>Professional background</h2>
-    <p>
-      In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a {nextRole.title.toLowerCase()} in {nextRole.detail}. My previous internships span quantitative trading, macro relative value, and ML-driven alpha research.
-    </p>
-  </section>
+      <div class="rail-section">
+        <h2>Affiliation</h2>
+        <p>{profile.affiliation}</p>
+      </div>
 
-  <section>
-    <h2>CV</h2>
-    <p>
-      Complete CV available upon request. Please contact me at <a href={`mailto:${profile.email}`}>{profile.email}</a>.
-    </p>
-  </section>
+      <div class="rail-section">
+        <h2>Links</h2>
+        <ul class="plain-link-list">
+          {profileLinks.map((link) => <li><a href={link.href}>{link.label}</a></li>)}
+        </ul>
+      </div>
+    </aside>
+  </div>
 </BaseLayout>

@@ -3,10 +3,11 @@ export const profile = {
   shortName: "Ben Shih",
   email: "benjamin.shih@stanford.edu",
   description:
-    "Benjamin Shih is a Stanford ICME graduate student working at the intersection of scientific machine learning, approximation theory, and quantitative research.",
+    "Benjamin Shih is a graduate student at Stanford ICME with interests in scientific machine learning, neural operators, approximation theory, and quantitative research.",
   summary:
-    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My interests span scientific and theoretical machine learning, approximation theory, and quantitative research.",
+    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My interests sit at the intersection of scientific machine learning, neural operators, approximation theory, and quantitative research.",
   affiliation: "Stanford Institute for Computational and Mathematical Engineering",
+  location: "Stanford, California",
   interests: [
     "Scientific machine learning and neural operators",
     "Approximation theory and finite-regularity analysis",
@@ -14,12 +15,17 @@ export const profile = {
   ],
   links: [
     { label: "Email", href: "mailto:benjamin.shih@stanford.edu" },
-    { label: "GitHub", href: "https://github.com/benjamin-shih" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/benjamin-shih/" },
-    { label: "ORCID", href: "https://orcid.org/0009-0008-5113-2536" },
+    { label: "Stanford Profile", href: "https://profiles.stanford.edu/benjamin-shih" },
+    { label: "ICME", href: "https://icme.stanford.edu/people/benjamin-shih" },
     {
       label: "Google Scholar",
-      href: "https://scholar.google.com/citations?user=sf7qiQ8AAAAJ&hl=en&authuser=2",
+      href: "https://scholar.google.com/citations?user=sf7qiQ8AAAAJ&hl=en",
+    },
+    { label: "ORCID", href: "https://orcid.org/0009-0008-5113-2536" },
+    { label: "GitHub", href: "https://github.com/benjamin-shih" },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/benjamin-shih/",
     },
   ],
 };
@@ -44,9 +50,11 @@ export const publications = [
       "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
     authors: "B. Shih, A. Peyvan, Z. Zhang, and G. E. Karniadakis",
     venue: "Computer Methods in Applied Mechanics and Engineering",
+    detail: "Vol. 434, Article 117560",
     year: "2025",
     links: [
       { label: "arXiv", href: "https://arxiv.org/abs/2405.19166" },
+      { label: "DOI", href: "https://doi.org/10.1016/j.cma.2024.117560" },
       {
         label: "Journal",
         href: "https://www.sciencedirect.com/science/article/pii/S0045782524008144",
@@ -68,7 +76,7 @@ export const thesis = {
 
 export const talks = [
   {
-    title: "Approximation Theory: An Overview — Classical & Modern Perspectives",
+    title: "Approximation Theory: An Overview — Classical and Modern Perspectives",
     venue: "Brown University",
     year: "2024",
   },
@@ -78,7 +86,7 @@ export const researchHistory = [
   {
     label: "Neural operators and scientific machine learning",
     description:
-      "Research in the CRUNCH group on neural operators, advised by Zhongqiang Zhang and George Em Karniadakis.",
+      "Research on neural operators with Brown's CRUNCH group, advised by Zhongqiang Zhang and George Em Karniadakis.",
     links: [
       { label: "CRUNCH Group", href: "https://sites.brown.edu/crunch-group/" },
       {
@@ -94,7 +102,7 @@ export const researchHistory = [
   {
     label: "GWAS of neurodegenerative diseases",
     description:
-      "Previous research with Dr. Li-San Wang at the University of Pennsylvania Wang Lab.",
+      "Earlier research on genome-wide association studies of neurodegenerative diseases with Dr. Li-San Wang at the University of Pennsylvania Wang Lab.",
     links: [{ label: "Wang Lab", href: "https://www.lisanwanglab.org/lswang/" }],
   },
 ];

@@ -6,7 +6,7 @@ import { education, experience, outside, profile, teaching } from "../data/profi
 <BaseLayout title="Background | Benjamin Shih" description="Education, professional experience, teaching, and selected background for Benjamin Shih.">
   <header class="page-heading">
     <h1>Background</h1>
-    <p>A concise public background page. A complete CV is available upon request.</p>
+    <p>Education, teaching, industry experience, and selected activities. A complete CV is available upon request.</p>
   </header>
 
   <section>
@@ -25,7 +25,7 @@ import { education, experience, outside, profile, teaching } from "../data/profi
   </section>
 
   <section>
-    <h2>Professional experience</h2>
+    <h2>Industry experience</h2>
     <div class="entry-list">
       {experience.map((item) => (
         <article class="dated-entry">
@@ -55,7 +55,7 @@ import { education, experience, outside, profile, teaching } from "../data/profi
   </section>
 
   <section>
-    <h2>Outside school and work</h2>
+    <h2>Additional activities</h2>
     <ul>
       {outside.map((item) => <li>{item}</li>)}
     </ul>
