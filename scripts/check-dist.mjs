@@ -5,7 +5,7 @@ const root = process.cwd();
 const dist = path.join(root, "dist");
 const requiredPages = ["index.html", "research/index.html", "background/index.html", "contact/index.html"];
 const requiredAssets = [
-  "assets/headshot.png",
+  "assets/profile-photo.jpg",
   "assets/temporal-learning-capacity-thesis.pdf",
   "assets/temporal-learning-capacity-slides.pdf",
 ];
