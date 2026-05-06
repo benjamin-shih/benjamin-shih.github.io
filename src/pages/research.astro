@@ -66,7 +66,7 @@ import { publications, researchHistory, talks, thesis } from "../data/profile";
         <p class="inline-links">
           {item.links.map((link, index) => (
             <>
-              <a href={link.href}>{link.label}</a>{index < item.links.length - 1 && <span> / </span>}
+              {"href" in link ? <a href={link.href}>{link.label}</a> : <span>{link.label}</span>}{index < item.links.length - 1 && <span> / </span>}
             </>
           ))}
         </p>
