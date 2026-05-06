@@ -335,6 +335,10 @@ section:first-child,
   margin-bottom: 0;
 }
 
+.degree-list p {
+  margin-bottom: 0;
+}
+
 .site-footer {
   border-top: 1px solid var(--rule);
   color: var(--muted);

@@ -6,7 +6,6 @@ export const profile = {
     "Benjamin Shih is a graduate student working on mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
   summary:
     "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My current research is in mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
-  location: "Stanford, California",
   interests: [
     "Scientific ML",
     "Mech interp",
@@ -37,7 +36,7 @@ export const education = [
   {
     institution: "Brown University",
     degree:
-      "B.S. with Honors in Applied Mathematics–Computer Science; B.A. in Pure Mathematics",
+      "B.S. with Honors in APMA-CS; B.A. in Math",
     period: "Completed 2024",
   },
 ];

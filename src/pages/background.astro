@@ -16,7 +16,9 @@ import { education, experience, outside, teaching } from "../data/profile";
           <p class="date">{item.period}</p>
           <div>
             <h3>{item.institution}</h3>
-            <p>{item.degree}</p>
+            <div class="degree-list">
+              {item.degree.split("; ").map((degree) => <p>{degree}</p>)}
+            </div>
           </div>
         </article>
       ))}
@@ -31,7 +33,7 @@ import { education, experience, outside, teaching } from "../data/profile";
           <p class="date">{item.period}</p>
           <div>
             <h3><a href={item.href}>{item.organization}</a> <em>{item.title}</em></h3>
-            <p>{item.detail}</p>
+            {item.detail !== "New York" && <p>{item.detail}</p>}
           </div>
         </article>
       ))}
