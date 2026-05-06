@@ -302,6 +302,11 @@ section:first-child,
   border-bottom: 0;
 }
 
+.selected-research .publication {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
 .publication-title {
   margin-bottom: 0.2rem;
   color: var(--text);
