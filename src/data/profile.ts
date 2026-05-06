@@ -92,7 +92,7 @@ export const researchHistory = [
   {
     label: "Neural operators and scientific machine learning",
     description:
-      "Research on neural operators with Brown's CRUNCH group, advised by Zhongqiang Zhang and George Em Karniadakis.",
+      "Previous work at Brown on neural operators for differential equations with the CRUNCH group, advised by Zhongqiang Zhang and George Em Karniadakis.",
     links: [
       { label: "CRUNCH Group", href: "https://sites.brown.edu/crunch-group/" },
       {
