@@ -16,7 +16,7 @@ import { education, experience, outside, teaching } from "../data/profile";
           <p class="date">{item.period}</p>
           <div>
             <h3>{item.institution}</h3>
-            <div class="degree-list">
+            <div class="degree-list entry-secondary">
               {item.degree.split("; ").map((degree) => <p>{degree}</p>)}
             </div>
           </div>
@@ -27,16 +27,15 @@ import { education, experience, outside, teaching } from "../data/profile";
 
   <section>
     <h2>Industry experience</h2>
-    <div class="entry-list industry-list">
+    <div class="entry-list">
       {experience.map((item) => (
-        <article class="dated-entry industry-entry">
+        <article class="dated-entry">
           <p class="date">{item.period}</p>
           <div>
             <h3><a href={item.href}>{item.organization}</a></h3>
-            <p class="industry-role">{item.title}</p>
-            {item.detail !== "New York" && (
-              <p class="industry-detail"><span>Focus</span>{item.detail}</p>
-            )}
+            <p class="entry-secondary">
+              {item.title}{item.detail !== "New York" && <span> · {item.detail}</span>}
+            </p>
           </div>
         </article>
       ))}
