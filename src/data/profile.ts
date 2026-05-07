@@ -30,7 +30,7 @@ export const profile = {
 export const education = [
   {
     institution: "Stanford University, Institute for Computational and Mathematical Engineering",
-    degree: "M.S., Computational Mathematics",
+    degree: "M.S. in Computational Mathematics",
     period: "2024-2026",
   },
   {
