@@ -3,7 +3,7 @@ export const profile = {
   shortName: "Ben Shih",
   email: "benjamin.shih@stanford.edu",
   description:
-    "Benjamin Shih is a graduate student in mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
+    "Benjamin Shih is a Stanford ICME graduate student working on mechanistic interpretability, theoretical machine learning, and scientific machine learning.",
   summary:
     "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My research focuses on mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
   interests: [

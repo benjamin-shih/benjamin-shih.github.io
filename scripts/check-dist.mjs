@@ -3,12 +3,14 @@ import path from "node:path";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
+const siteUrl = "https://benjamin-shih.github.io";
 const requiredPages = ["index.html", "research/index.html", "background/index.html", "contact/index.html"];
 const requiredAssets = [
   "assets/profile-photo.jpg",
   "assets/temporal-learning-capacity-thesis.pdf",
   "assets/temporal-learning-capacity-slides.pdf",
 ];
+const requiredRootFiles = ["favicon.svg", "og.svg", "robots.txt", "sitemap.xml"];
 
 function fail(message) {
   console.error(`check-dist: ${message}`);
@@ -49,6 +51,22 @@ for (const asset of requiredAssets) {
   if (!existsSync(path.join(dist, asset))) fail(`required asset missing: ${asset}`);
 }
 
+for (const file of requiredRootFiles) {
+  if (!existsSync(path.join(dist, file))) fail(`required root file missing: ${file}`);
+}
+
+if (existsSync(path.join(dist, "robots.txt"))) {
+  const robots = readFileSync(path.join(dist, "robots.txt"), "utf8");
+  if (!robots.includes(`${siteUrl}/sitemap.xml`)) fail("robots.txt is missing the sitemap URL");
+}
+
+if (existsSync(path.join(dist, "sitemap.xml"))) {
+  const sitemap = readFileSync(path.join(dist, "sitemap.xml"), "utf8");
+  for (const urlPath of ["/", "/research/", "/background/", "/contact/"]) {
+    if (!sitemap.includes(`${siteUrl}${urlPath}`)) fail(`sitemap.xml is missing ${urlPath}`);
+  }
+}
+
 const htmlFiles = existsSync(dist) ? walk(dist).filter((file) => file.endsWith(".html")) : [];
 const attrPattern = /\b(?:href|src)=["']([^"']+)["']/g;
 
@@ -63,5 +81,5 @@ for (const file of htmlFiles) {
 }
 
 if (!process.exitCode) {
-  console.log(`check-dist: ${requiredPages.length} pages, ${requiredAssets.length} assets, and ${htmlFiles.length} html files passed`);
+  console.log(`check-dist: ${requiredPages.length} pages, ${requiredAssets.length} assets, ${requiredRootFiles.length} root files, and ${htmlFiles.length} html files passed`);
 }
