@@ -32,6 +32,25 @@ Design schematic: [`docs/site-schematic.svg`](docs/site-schematic.svg).
 - Tone is objective and factual, leads with academic research, and keeps quantitative/professional background secondary.
 - No GitHub repositories are featured yet.
 
-## Later deployment phase
+## GitHub Pages deployment
 
-When ready, create/add the `benjamin-shih.github.io` GitHub remote and add a GitHub Pages deployment workflow or Pages configuration. This scaffold currently includes validation only, not deployment.
+This site is configured for the GitHub Pages user-site URL <https://benjamin-shih.github.io/>.
+
+To publish it:
+
+1. Create a GitHub repository named `benjamin-shih.github.io`.
+2. Add it as the local remote:
+
+   ```bash
+   git remote add origin git@github.com:benjamin-shih/benjamin-shih.github.io.git
+   ```
+
+3. Push the current branch and set upstream:
+
+   ```bash
+   git push -u origin main
+   ```
+
+4. In GitHub, set **Settings → Pages → Source** to **GitHub Actions**.
+
+After that, pushes to `main` run `.github/workflows/deploy.yml`, validate the Astro build, and deploy `dist/` to GitHub Pages.
