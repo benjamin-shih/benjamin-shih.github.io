@@ -379,7 +379,8 @@ section:first-child,
   .home-layout {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    align-items: stretch;
+    gap: 0;
   }
 
   .home-main {
@@ -392,6 +393,7 @@ section:first-child,
 
   .home-main > section:not(.intro) {
     order: 3;
+    width: 100%;
   }
 
   .profile-rail {
@@ -400,6 +402,7 @@ section:first-child,
     grid-template-columns: 150px minmax(0, 1fr);
     width: 100%;
     gap: 1.2rem 1.4rem;
+    margin-top: 2rem;
     padding: 1.25rem 0 0;
     border-top: 1px solid var(--rule);
     border-left: 0;
@@ -467,7 +470,7 @@ section:first-child,
   }
 
   .home-layout {
-    gap: 1.25rem;
+    gap: 0;
   }
 
   .lede,
@@ -482,22 +485,26 @@ section:first-child,
 
   .profile-rail {
     display: grid;
-    grid-template-columns: 92px minmax(0, 1fr);
-    gap: 0.75rem 1rem;
+    grid-template-columns: 118px minmax(0, 1fr);
+    gap: 0.8rem 1rem;
     align-items: start;
-    padding: 0.95rem 0;
+    margin-top: 1.35rem;
+    padding: 1rem 0 0;
     border-top: 1px solid var(--rule);
-    border-bottom: 1px solid var(--rule);
   }
 
   .profile-photo {
-    width: 92px;
+    width: 118px;
     grid-row: span 2;
     margin-bottom: 0;
   }
 
   .rail-section {
     min-width: 0;
+  }
+
+  .rail-section a {
+    overflow-wrap: anywhere;
   }
 
   .rail-section h2 {
@@ -571,11 +578,27 @@ section:first-child,
   }
 
   .profile-rail {
-    grid-template-columns: 82px minmax(0, 1fr);
+    grid-template-columns: 118px minmax(0, 1fr);
   }
 
   .profile-photo {
-    width: 82px;
+    width: 118px;
+  }
+}
+
+@media (max-width: 340px) {
+  .profile-rail {
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: 0.75rem;
+  }
+
+  .profile-photo {
+    width: 96px;
+  }
+
+  .rail-section p,
+  .plain-link-list {
+    font-size: 0.95rem;
   }
 }
 
