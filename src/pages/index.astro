@@ -1,8 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { experience, profile, publications, thesis } from "../data/profile";
+import { experience, profile, publications } from "../data/profile";
 
-const featuredPublication = publications[0];
 const nextRole = experience[0];
 const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].includes(link.label));
 ---
@@ -13,7 +12,7 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
       <section class="intro">
         <h1>Benjamin Shih</h1>
         <p class="lede">
-          I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My current research uses mechanistic interpretability to study how language models represent, use, and expose intermediate computations in reasoning. In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a Quantitative Researcher in {nextRole.detail}.
+          I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My current research is in mechanistic interpretability, reverse-engineering the internal computations of neural networks to understand how they represent information and produce their behavior. In {nextRole.period}, I will join <a href={nextRole.href}>{nextRole.organization}</a> as a Quantitative Researcher in {nextRole.detail}.
         </p>
         <p>
           Previously, I received an Sc.B. with Honors in Applied Mathematics–Computer Science and an A.B. in Mathematics from Brown University.
@@ -29,38 +28,28 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
 
       <section class="selected-research">
         <h2>Selected research</h2>
-        <article class="publication">
-          <p class="publication-title">{featuredPublication.title}</p>
-          <p>{featuredPublication.authors}</p>
-          <p class="publication-meta">
-            <em>{featuredPublication.venue}</em>, {featuredPublication.detail}, {featuredPublication.year}.
-          </p>
-          <p class="inline-links">
-            {featuredPublication.links.map((link, index) => (
-              <>
-                <a href={link.href}>{link.label}</a>{index < featuredPublication.links.length - 1 && <span> / </span>}
-              </>
-            ))}
-          </p>
-        </article>
-        <article class="publication">
-          <p class="publication-title">{thesis.title}</p>
-          <p>{thesis.authors}</p>
-          <p class="publication-meta">{thesis.venue}, {thesis.year}.</p>
-          <p class="inline-links">
-            {thesis.links.map((link, index) => (
-              <>
-                <a href={link.href}>{link.label}</a>{index < thesis.links.length - 1 && <span> / </span>}
-              </>
-            ))}
-          </p>
-        </article>
+        {publications.map((paper) => (
+          <article class="publication">
+            <p class="publication-title">{paper.title}</p>
+            <p>{paper.authors}</p>
+            <p class="publication-meta">
+              <em>{paper.venue}</em>, {paper.detail}, {paper.year}.
+            </p>
+            <p class="inline-links">
+              {paper.links.map((link, index) => (
+                <>
+                  <a href={link.href}>{link.label}</a>{index < paper.links.length - 1 && <span> / </span>}
+                </>
+              ))}
+            </p>
+          </article>
+        ))}
       </section>
 
       <section>
         <h2>Research overview</h2>
         <p>
-          At Stanford, I work in the DASH Lab with Eric Darve on mechanistic interpretability of language-model reasoning. Previously at Brown, I worked in the CRUNCH group with Zhongqiang Zhang and George Em Karniadakis on neural operators for differential equations.
+          At Stanford, I work in the DASH Lab with Eric Darve on mechanistic interpretability, across several projects on how neural networks compute internally. Previously at Brown, I worked in the CRUNCH group with Zhongqiang Zhang and George Em Karniadakis on neural operators for differential equations.
         </p>
       </section>
 

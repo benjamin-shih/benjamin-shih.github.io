@@ -5,7 +5,7 @@ export const profile = {
   description:
     "Benjamin Shih is a Stanford ICME graduate student working on mechanistic interpretability, theoretical machine learning, and scientific machine learning.",
   summary:
-    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My research focuses on mechanistic interpretability of language-model reasoning, with broader interests in theoretical and scientific machine learning.",
+    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My research focuses on mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
   interests: [
     "Scientific ML",
     "Mech interp",
@@ -95,7 +95,7 @@ export const researchHistory = [
   {
     label: "Mechanistic interpretability",
     description:
-      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study how language models represent, use, and expose intermediate computations, including scratchpad reasoning, causal state variables, and broader questions about faithful model internals.",
+      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I work on mechanistic interpretability — reverse-engineering the internal computations of neural networks — across several directions in how models represent information and produce their behavior.",
     links: [
       { label: "DASH Lab" },
       { label: "Eric Darve", href: "https://profiles.stanford.edu/eric-darve" },

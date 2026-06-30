@@ -71,14 +71,10 @@ const researchPage = path.join(dist, "research/index.html");
 if (existsSync(researchPage)) {
   const researchHtml = readFileSync(researchPage, "utf8");
   const requiredResearchMarkup = [
-    'class="research-layout"',
-    'class="research-nav"',
-    'href="#overview"',
-    'href="#publications"',
-    'id="overview"',
-    'id="publications"',
-    'class="dated-entry research-work"',
+    'class="research-entry"',
+    'class="entry-links"',
     "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
+    "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
     "arXiv:2606.29522",
   ];
 

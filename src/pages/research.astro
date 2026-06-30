@@ -1,16 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { publications, researchHistory, talks, thesis } from "../data/profile";
-
-const researchSections = [
-  { id: "overview", label: "Overview" },
-  { id: "publications", label: "Publications" },
-  { id: "thesis", label: "Thesis" },
-  { id: "experience", label: "Experience" },
-  { id: "talks", label: "Talks" },
-];
-
-const researchPeriods = ["Current", "Brown", "Earlier"];
 ---
 
 <BaseLayout title="Research | Benjamin Shih" description="Research by Benjamin Shih in mechanistic interpretability, theoretical machine learning, and scientific machine learning.">
@@ -21,111 +11,70 @@ const researchPeriods = ["Current", "Brown", "Earlier"];
     </p>
   </header>
 
-  <div class="research-layout">
-    <aside class="research-nav" aria-label="Research sections">
-      <p class="research-nav-title">On this page</p>
-      <nav>
-        {researchSections.map((section) => <a href={`#${section.id}`}>{section.label}</a>)}
-      </nav>
-    </aside>
+  <section>
+    <h2>Overview</h2>
+    <p>
+      At Stanford, I am advised by Eric Darve in the DASH Lab, where I work on mechanistic interpretability: reverse-engineering the internal mechanisms of neural networks to understand how they represent information and arrive at their outputs.
+    </p>
+    <p>
+      Previously at Brown, I worked in the CRUNCH group with Zhongqiang Zhang and George Em Karniadakis on neural operators for differential equations, including transformer-based operator learning in finite-regularity settings.
+    </p>
+  </section>
 
-    <div class="research-main">
-      <section id="overview">
-        <h2>Overview</h2>
-        <p class="section-subtitle">Current focus</p>
-        <p>
-          At Stanford, I am advised by Eric Darve in the DASH Lab, working on mechanistic interpretability for language-model reasoning: how models represent, use, and expose intermediate computations, and when those representations can support faithful oversight.
-        </p>
-        <p>
-          Previously at Brown, I worked in the CRUNCH group with Zhongqiang Zhang and George Em Karniadakis on neural operators for differential equations, including transformer-based operator learning in finite-regularity settings.
-        </p>
-      </section>
-
-      <section id="publications">
-        <h2>Publications</h2>
-        <p class="section-subtitle">Papers and preprints</p>
-        <div class="entry-list">
-          {publications.map((paper) => (
-            <article class="dated-entry research-work">
-              <p class="date">{paper.year}</p>
-              <div>
-                <h3 class="publication-title">{paper.title}</h3>
-                <p class="entry-secondary">{paper.authors}</p>
-                <p class="publication-meta">
-                  <em>{paper.venue}</em>, {paper.detail}.
-                </p>
-                <p class="inline-links">
-                  {paper.links.map((link, index) => (
-                    <>
-                      <a href={link.href}>{link.label}</a>{index < paper.links.length - 1 && <span> / </span>}
-                    </>
-                  ))}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="thesis">
-        <h2>Bachelor's thesis</h2>
-        <p class="section-subtitle">Long-form work</p>
-        <article class="dated-entry research-work">
-          <p class="date">{thesis.year}</p>
-          <div>
-            <h3 class="publication-title">{thesis.title}</h3>
-            <p class="entry-secondary">{thesis.authors}</p>
-            <p class="publication-meta">{thesis.venue}.</p>
-            <p class="inline-links">
-              {thesis.links.map((link, index) => (
-                <>
-                  <a href={link.href}>{link.label}</a>{index < thesis.links.length - 1 && <span> / </span>}
-                </>
-              ))}
-            </p>
+  <section>
+    <h2>Publications</h2>
+    <div class="entry-list">
+      {publications.map((paper) => (
+        <article class="research-entry">
+          <div class="entry-body">
+            <h3 class="publication-title">{paper.title}</h3>
+            <p class="entry-secondary">{paper.authors}</p>
+            <p class="publication-meta"><em>{paper.venue}</em>, {paper.detail}, {paper.year}.</p>
           </div>
+          <p class="entry-links">
+            {paper.links.map((link) => <a href={link.href}>{link.label}</a>)}
+          </p>
         </article>
-      </section>
-
-      <section id="experience">
-        <h2>Research experience</h2>
-        <p class="section-subtitle">Research areas and groups</p>
-        <div class="entry-list">
-          {researchHistory.map((item, index) => (
-            <article class="dated-entry research-work">
-              <p class="date">{researchPeriods[index]}</p>
-              <div>
-                <h3>{item.label}</h3>
-                <p>{item.description}</p>
-                <p class="inline-links">
-                  {item.links.map((link, linkIndex) => (
-                    <>
-                      {"href" in link ? <a href={link.href}>{link.label}</a> : <span>{link.label}</span>}{linkIndex < item.links.length - 1 && <span> / </span>}
-                    </>
-                  ))}
-                </p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="talks">
-        <h2>Talks</h2>
-        <p class="section-subtitle">Selected presentations</p>
-        <div class="entry-list">
-          {talks.map((talk) => (
-            <article class="dated-entry research-work">
-              <p class="date">{talk.year}</p>
-              <div>
-                <h3>{talk.title}</h3>
-                <p class="entry-secondary">{talk.venue}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
+      ))}
     </div>
-  </div>
+  </section>
+
+  <section>
+    <h2>Bachelor's thesis</h2>
+    <article class="research-entry">
+      <div class="entry-body">
+        <h3 class="publication-title">{thesis.title}</h3>
+        <p class="entry-secondary">{thesis.authors}</p>
+        <p class="publication-meta">{thesis.venue}, {thesis.year}.</p>
+      </div>
+      <p class="entry-links">
+        {thesis.links.map((link) => <a href={link.href}>{link.label}</a>)}
+      </p>
+    </article>
+  </section>
+
+  <section>
+    <h2>Research experience</h2>
+    {researchHistory.map((item) => (
+      <article class="plain-entry">
+        <h3>{item.label}</h3>
+        <p>{item.description}</p>
+        <p class="inline-links">
+          {item.links.map((link, index) => (
+            <>
+              {"href" in link ? <a href={link.href}>{link.label}</a> : <span>{link.label}</span>}{index < item.links.length - 1 && <span> / </span>}
+            </>
+          ))}
+        </p>
+      </article>
+    ))}
+  </section>
+
+  <section>
+    <h2>Talks</h2>
+    <ul>
+      {talks.map((talk) => <li>{talk.title}, {talk.venue}, {talk.year}.</li>)}
+    </ul>
+  </section>
 
 </BaseLayout>
