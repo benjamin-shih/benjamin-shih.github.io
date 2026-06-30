@@ -252,15 +252,6 @@ section:first-child,
 .entry-links a {
   width: max-content;
   max-width: 100%;
-  color: var(--muted);
-  text-decoration: none;
-}
-
-.entry-links a:hover,
-.entry-links a:focus-visible {
-  color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 0.2em;
 }
 
 .profile-photo {
