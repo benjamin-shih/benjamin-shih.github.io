@@ -5,7 +5,7 @@ export const profile = {
   description:
     "Benjamin Shih is a Stanford ICME graduate student working on mechanistic interpretability, theoretical machine learning, and scientific machine learning.",
   summary:
-    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My research focuses on mechanistic interpretability, with broader interests in theoretical and scientific machine learning.",
+    "I am a graduate student at the Stanford Institute for Computational and Mathematical Engineering. My research focuses on mechanistic interpretability of language-model reasoning, with broader interests in theoretical and scientific machine learning.",
   interests: [
     "Scientific ML",
     "Mech interp",
@@ -42,6 +42,18 @@ export const education = [
 ];
 
 export const publications = [
+  {
+    title:
+      "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
+    authors: "B. Shih, J. Winnicki, and E. Darve",
+    venue: "arXiv preprint",
+    detail: "arXiv:2606.29522",
+    year: "2026",
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2606.29522" },
+      { label: "PDF", href: "https://arxiv.org/pdf/2606.29522" },
+    ],
+  },
   {
     title:
       "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
@@ -83,7 +95,7 @@ export const researchHistory = [
   {
     label: "Mechanistic interpretability",
     description:
-      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study feature organization in language models, including hierarchy, absorption, and the interpretability tradeoffs of sparse representations.",
+      "Current research in the DASH Lab at Stanford, advised by Eric Darve. I study how language models represent, use, and expose intermediate computations, including scratchpad reasoning, causal state variables, and broader questions about faithful model internals.",
     links: [
       { label: "DASH Lab" },
       { label: "Eric Darve", href: "https://profiles.stanford.edu/eric-darve" },

@@ -67,6 +67,26 @@ if (existsSync(path.join(dist, "sitemap.xml"))) {
   }
 }
 
+const researchPage = path.join(dist, "research/index.html");
+if (existsSync(researchPage)) {
+  const researchHtml = readFileSync(researchPage, "utf8");
+  const requiredResearchMarkup = [
+    'class="research-layout"',
+    'class="research-nav"',
+    'href="#overview"',
+    'href="#publications"',
+    'id="overview"',
+    'id="publications"',
+    'class="dated-entry research-work"',
+    "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
+    "arXiv:2606.29522",
+  ];
+
+  for (const snippet of requiredResearchMarkup) {
+    if (!researchHtml.includes(snippet)) fail(`research page is missing expected markup: ${snippet}`);
+  }
+}
+
 const htmlFiles = existsSync(dist) ? walk(dist).filter((file) => file.endsWith(".html")) : [];
 const attrPattern = /\b(?:href|src)=["']([^"']+)["']/g;
 
