@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AuthorList from "../components/AuthorList.astro";
 import { experience, profile, publications } from "../data/profile";
 
 const nextRole = experience[0];
@@ -31,7 +32,7 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
         {publications.map((paper) => (
           <article class="publication">
             <p class="publication-title">{paper.title}</p>
-            <p>{paper.authors}</p>
+            <p><AuthorList authors={paper.authors} /></p>
             <p class="publication-meta">
               <em>{paper.venue}</em>, {paper.detail}, {paper.year}.
             </p>

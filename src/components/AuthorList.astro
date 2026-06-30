@@ -1,0 +1,9 @@
+---
+import { profile } from "../data/profile";
+
+const { authors } = Astro.props;
+const segments = authors.split(profile.authorName);
+---
+{segments.map((segment, index) => (
+  <>{segment}{index < segments.length - 1 && <strong class="author-self">{profile.authorName}</strong>}</>
+))}

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import AuthorList from "../components/AuthorList.astro";
 import { publications, researchHistory, talks, thesis } from "../data/profile";
 ---
 
@@ -28,7 +29,7 @@ import { publications, researchHistory, talks, thesis } from "../data/profile";
         <article class="research-entry">
           <div class="entry-body">
             <h3 class="publication-title">{paper.title}</h3>
-            <p class="entry-secondary">{paper.authors}</p>
+            <p class="entry-secondary"><AuthorList authors={paper.authors} /></p>
             <p class="publication-meta"><em>{paper.venue}</em>, {paper.detail}, {paper.year}.</p>
           </div>
           <p class="entry-links">
@@ -44,7 +45,7 @@ import { publications, researchHistory, talks, thesis } from "../data/profile";
     <article class="research-entry">
       <div class="entry-body">
         <h3 class="publication-title">{thesis.title}</h3>
-        <p class="entry-secondary">{thesis.authors}</p>
+        <p class="entry-secondary"><AuthorList authors={thesis.authors} /></p>
         <p class="publication-meta">{thesis.venue}, {thesis.year}.</p>
       </div>
       <p class="entry-links">

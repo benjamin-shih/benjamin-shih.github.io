@@ -352,6 +352,14 @@ section:first-child,
   font-weight: 600;
 }
 
+.author-self {
+  font-weight: 600;
+}
+
+.entry-secondary .author-self {
+  color: var(--text);
+}
+
 .publication-meta,
 .inline-links {
   color: var(--muted);

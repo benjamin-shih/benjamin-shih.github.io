@@ -1,6 +1,7 @@
 export const profile = {
   name: "Benjamin Shih",
   shortName: "Ben Shih",
+  authorName: "B. Shih",
   email: "benjamin.shih@stanford.edu",
   description:
     "Benjamin Shih is a Stanford ICME graduate student working on mechanistic interpretability, theoretical machine learning, and scientific machine learning.",
