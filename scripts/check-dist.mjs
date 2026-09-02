@@ -73,8 +73,10 @@ if (existsSync(researchPage)) {
   const requiredResearchMarkup = [
     'class="research-entry"',
     'class="entry-links"',
+    "How Do Language Models Choose Between Context and Memory?",
     "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
     "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
+    "arXiv:2609.00753",
     "arXiv:2606.29522",
   ];
 

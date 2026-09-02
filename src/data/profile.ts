@@ -44,6 +44,17 @@ export const education = [
 
 export const publications = [
   {
+    title: "How Do Language Models Choose Between Context and Memory?",
+    authors: "B. Shih, J. Winnicki, and A. Cao",
+    venue: "Under review at a NeurIPS workshop",
+    detail: "arXiv:2609.00753",
+    year: "2026",
+    links: [
+      { label: "arXiv", href: "https://arxiv.org/abs/2609.00753" },
+      { label: "PDF", href: "https://arxiv.org/pdf/2609.00753" },
+    ],
+  },
+  {
     title:
       "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
     authors: "B. Shih, J. Winnicki, and E. Darve",
