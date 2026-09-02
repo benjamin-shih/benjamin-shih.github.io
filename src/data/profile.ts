@@ -46,7 +46,7 @@ export const publications = [
   {
     title: "How Do Language Models Choose Between Context and Memory?",
     authors: "B. Shih, J. Winnicki, and A. Cao",
-    venue: "Under review at a NeurIPS workshop",
+    venue: "Under review",
     detail: "arXiv:2609.00753",
     year: "2026",
     links: [

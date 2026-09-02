@@ -76,12 +76,17 @@ if (existsSync(researchPage)) {
     "How Do Language Models Choose Between Context and Memory?",
     "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
     "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
+    "Under review",
     "arXiv:2609.00753",
     "arXiv:2606.29522",
   ];
 
   for (const snippet of requiredResearchMarkup) {
     if (!researchHtml.includes(snippet)) fail(`research page is missing expected markup: ${snippet}`);
+  }
+
+  if (researchHtml.includes("Under review at a NeurIPS workshop")) {
+    fail("research page includes a workshop-review claim");
   }
 }
 
