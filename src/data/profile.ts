@@ -46,24 +46,27 @@ export const publications = [
   {
     title: "How Do Language Models Choose Between Context and Memory?",
     authors: "B. Shih, J. Winnicki, and A. Cao",
-    venue: "Under review",
+    venue:
+      "NeurIPS Workshop on Interpretability as a Science: Toward Rigorous Foundations for Understanding LLMs",
     detail: "arXiv:2609.00753",
     year: "2026",
     links: [
       { label: "arXiv", href: "https://arxiv.org/abs/2609.00753" },
       { label: "PDF", href: "https://arxiv.org/pdf/2609.00753" },
+      { label: "Workshop", href: "https://interpscience.github.io/" },
     ],
   },
   {
     title:
       "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
     authors: "B. Shih, J. Winnicki, and E. Darve",
-    venue: "arXiv preprint",
-    detail: "arXiv:2606.29522",
+    venue: "NeurIPS Workshop on Interpreting Agent Behavior (IAB)",
+    detail: "Oral presentation (top 5 papers); arXiv:2606.29522",
     year: "2026",
     links: [
       { label: "arXiv", href: "https://arxiv.org/abs/2606.29522" },
       { label: "PDF", href: "https://arxiv.org/pdf/2606.29522" },
+      { label: "Workshop", href: "https://iab-agents.github.io/" },
     ],
   },
   {
