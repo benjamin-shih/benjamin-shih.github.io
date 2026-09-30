@@ -34,7 +34,7 @@ const profileLinks = profile.links.filter((link) => !["Email", "LinkedIn"].inclu
             <p class="publication-title">{paper.title}</p>
             <p><AuthorList authors={paper.authors} /></p>
             <p class="publication-meta">
-              <em>{paper.venue}</em>, {paper.detail}, {paper.year}.
+              <em>{paper.venue}</em>{paper.note && ` ${paper.note}`}{paper.detail && `, ${paper.detail}`}, {paper.year}.
             </p>
             <p class="inline-links">
               {paper.links.map((link, index) => (

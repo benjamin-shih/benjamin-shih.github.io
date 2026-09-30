@@ -30,7 +30,7 @@ import { publications, researchHistory, talks, thesis } from "../data/profile";
           <div class="entry-body">
             <h3 class="publication-title">{paper.title}</h3>
             <p class="entry-secondary"><AuthorList authors={paper.authors} /></p>
-            <p class="publication-meta"><em>{paper.venue}</em>, {paper.detail}, {paper.year}.</p>
+            <p class="publication-meta"><em>{paper.venue}</em>{paper.note && ` ${paper.note}`}{paper.detail && `, ${paper.detail}`}, {paper.year}.</p>
           </div>
           <p class="entry-links">
             {paper.links.map((link) => <a href={link.href}>{link.label}</a>)}

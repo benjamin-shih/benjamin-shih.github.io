@@ -78,17 +78,26 @@ if (existsSync(researchPage)) {
     "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
     "NeurIPS Workshop on Interpretability as a Science: Toward Rigorous Foundations for Understanding LLMs",
     "NeurIPS Workshop on Interpreting Agent Behavior (IAB)",
-    "Oral presentation (top 5 papers)",
-    "arXiv:2609.00753",
-    "arXiv:2606.29522",
+    "(oral)",
   ];
 
   for (const snippet of requiredResearchMarkup) {
     if (!researchHtml.includes(snippet)) fail(`research page is missing expected markup: ${snippet}`);
   }
 
-  if (researchHtml.includes("Under review") || researchHtml.includes("arXiv preprint")) {
-    fail("research page includes stale publication status");
+  const staleResearchMarkup = [
+    "Under review",
+    "arXiv preprint",
+    "Oral presentation",
+    "top 5 papers",
+    "arXiv:2609.00753",
+    "arXiv:2606.29522",
+    "https://interpscience.github.io/",
+    "https://iab-agents.github.io/",
+  ];
+
+  for (const snippet of staleResearchMarkup) {
+    if (researchHtml.includes(snippet)) fail(`research page includes stale publication markup: ${snippet}`);
   }
 }
 

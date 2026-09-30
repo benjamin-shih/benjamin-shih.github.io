@@ -48,12 +48,12 @@ export const publications = [
     authors: "B. Shih, J. Winnicki, and A. Cao",
     venue:
       "NeurIPS Workshop on Interpretability as a Science: Toward Rigorous Foundations for Understanding LLMs",
-    detail: "arXiv:2609.00753",
+    note: "",
+    detail: "",
     year: "2026",
     links: [
       { label: "arXiv", href: "https://arxiv.org/abs/2609.00753" },
       { label: "PDF", href: "https://arxiv.org/pdf/2609.00753" },
-      { label: "Workshop", href: "https://interpscience.github.io/" },
     ],
   },
   {
@@ -61,12 +61,12 @@ export const publications = [
       "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
     authors: "B. Shih, J. Winnicki, and E. Darve",
     venue: "NeurIPS Workshop on Interpreting Agent Behavior (IAB)",
-    detail: "Oral presentation (top 5 papers); arXiv:2606.29522",
+    note: "(oral)",
+    detail: "",
     year: "2026",
     links: [
       { label: "arXiv", href: "https://arxiv.org/abs/2606.29522" },
       { label: "PDF", href: "https://arxiv.org/pdf/2606.29522" },
-      { label: "Workshop", href: "https://iab-agents.github.io/" },
     ],
   },
   {
@@ -74,6 +74,7 @@ export const publications = [
       "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
     authors: "B. Shih, A. Peyvan, Z. Zhang, and G. E. Karniadakis",
     venue: "Computer Methods in Applied Mechanics and Engineering",
+    note: "",
     detail: "Vol. 434, Article 117560",
     year: "2025",
     links: [
