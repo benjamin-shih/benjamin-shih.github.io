@@ -60,8 +60,8 @@ export const publications = [
     title:
       "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
     authors: "B. Shih, J. Winnicki, and E. Darve",
-    venue: "NeurIPS Workshop on Interpreting Agent Behavior (IAB)",
-    note: "(oral)",
+    venue: "NeurIPS Workshop on Interpreting Agent Behavior",
+    note: "(Oral)",
     detail: "",
     year: "2026",
     links: [

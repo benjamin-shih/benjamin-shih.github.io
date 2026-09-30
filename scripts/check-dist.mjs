@@ -77,8 +77,8 @@ if (existsSync(researchPage)) {
     "Do Models Read What They Write? Causal Registers in Scratchpad Reasoning",
     "Transformers as Neural Operators for Solutions of Differential Equations with Finite Regularity",
     "NeurIPS Workshop on Interpretability as a Science: Toward Rigorous Foundations for Understanding LLMs",
-    "NeurIPS Workshop on Interpreting Agent Behavior (IAB)",
-    "(oral)",
+    "NeurIPS Workshop on Interpreting Agent Behavior",
+    "(Oral)",
   ];
 
   for (const snippet of requiredResearchMarkup) {
@@ -89,6 +89,8 @@ if (existsSync(researchPage)) {
     "Under review",
     "arXiv preprint",
     "Oral presentation",
+    "(oral)",
+    "(IAB)",
     "top 5 papers",
     "arXiv:2609.00753",
     "arXiv:2606.29522",
